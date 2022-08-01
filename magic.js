@@ -7,7 +7,7 @@ const hide = (Id) => {
     document.getElementById(Id).style.display = "block";
  }
 
- let randomAnswer = Math.floor(Math.random()* 12);
+ let randomAnswer = Math.floor(Math.random()* 19);
  let eightBall = '';
  let answer = document.getElementById('answer');
 
@@ -70,13 +70,13 @@ const hide = (Id) => {
    break;
    
    case 8:
-    eightBall = 'Ehh';
-    answer.innerText = eightBall;
-    console.log(eightBall);
-    document.write(answer);
-    break;
+   eightBall = 'Ehh';
+   answer.innerText = eightBall;
+   console.log(eightBall);
+   document.write(answer);
+   break;
 
-    case 9:
+   case 9:
    eightBall = "Don't quit your day job";
    answer.innerText = eightBall;
    console.log(eightBall);
@@ -84,25 +84,67 @@ const hide = (Id) => {
    break;
 
    case 10:
-    eightBall = 'Ask again later';
-    answer.innerText = eightBall;
-    console.log(eightBall);
-    document.write(answer);
-    break;
+   eightBall = 'Ask again later';
+   answer.innerText = eightBall;
+   console.log(eightBall);
+   document.write(answer);
+   break;
 
-    case 11:
-    eightBall = 'It is possible';
-    answer.innerText = eightBall;
-    console.log(eightBall);
-    document.write(answer);
-    break;
+   case 11:
+   eightBall = 'It is possible';
+   answer.innerText = eightBall;
+   console.log(eightBall);
+   document.write(answer);
+   break;
 
-    case 12:
-    eightBall = "I predict outcomes, I don't make miracles";
-    answer.innerText = eightBall;
-    console.log(eightBall);
-    document.write(answer);
-    break;
+   case 12:
+   eightBall = "Yes, yes, and yes";
+   answer.innerText = eightBall;
+   console.log(eightBall);
+   document.write(answer);
+   break;    
+    
+   case 13:
+   eightBall = "Take the risk or lose the chance";
+   answer.innerText = eightBall;
+   console.log(eightBall);
+   document.write(answer);
+   break;
+    
+   case 14:
+   eightBall = "If nothing goes right, go left";
+   answer.innerText = eightBall;
+   console.log(eightBall);
+   document.write(answer);
+   break;
+    
+   case 15:
+   eightBall = "Good things happen to those who hustle";
+   answer.innerText = eightBall;
+   console.log(eightBall);
+   document.write(answer);
+   break;   
+   
+   case 16:
+   eightBall = "Dream big. Pray bigger";
+   answer.innerText = eightBall;
+   console.log(eightBall);
+   document.write(answer);
+   break;
+
+   case 17:
+   eightBall = "If you want it, work for it";
+   answer.innerText = eightBall;
+   console.log(eightBall);
+   document.write(answer);
+   break;
+
+   case 18:
+   eightBall = "NO... Yes! Works every time";
+   answer.innerText = eightBall;
+   console.log(eightBall);
+   document.write(answer);
+   break;
      
    default: 
    console.log(eightBall);
@@ -119,17 +161,22 @@ const magic = () =>  {
     let mainContainer = document.getElementById('main-container');
 
 
-    for (let i = 0; i < 1; i++){
+
         if (question.value.length >= 5){
-            console.log(i)
+            // console.log(i)
             question.value = 'it is working its magic';
             outerShell.style.animationPlayState = 'running';
             mainContainer.style.animationPlayState = 'running';
 
+            setTimeout(() => {
+                hide('bottom-8-white');
+            },500);
 
-            setTimeout(function (){
+            setTimeout( ()=> {
                 show('answer-container');
                 }, 2000);
+
+    
 
             setTimeout(function (){
                 hide('answer-container');
@@ -139,6 +186,6 @@ const magic = () =>  {
                 }, 7000);
         }
 
-    }
+    
     
 }
